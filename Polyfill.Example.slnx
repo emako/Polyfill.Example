@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/Polyfill.Example.IndexRange/Polyfill.Example.IndexRange.csproj" />
+  <Project Path="src\Polyfill.Example.IsExternalInit\Polyfill.Example.IsExternalInit.csproj" />
+</Solution>
