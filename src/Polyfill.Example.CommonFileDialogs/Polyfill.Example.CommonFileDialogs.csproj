@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Polyfill.Example.CommonFileDialogs</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Add Windows API Code Pack to provide CommonFileDialogs on older frameworks -->
+    <PackageReference Include="WindowsAPICodePack.Shell.CommonFileDialogs" Version="1.1.5" />
+  </ItemGroup>
+
+</Project>

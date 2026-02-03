@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="src/Polyfill.Example.CommonFileDialogs/Polyfill.Example.CommonFileDialogs.csproj" />
   <Project Path="src/Polyfill.Example.IndexRange/Polyfill.Example.IndexRange.csproj" />
   <Project Path="src/Polyfill.Example.IsExternalInit/Polyfill.Example.IsExternalInit.csproj" />
   <Project Path="src/Polyfill.Example.WindowsLauncher/Polyfill.Example.WindowsLauncher.csproj" />
