@@ -9,12 +9,18 @@ This repository demonstrates how to provide polyfill support for C# 9.0+ feature
 ```
 Polyfill.Example.slnx
 src/
-  Polyfill.Example.IndexRange/    // Index/Range feature demo
-    Program.cs
-    ...
-  Polyfill.Example.IsExternalInit/ // isExternalInit feature demo
-    Program.cs
-    ...
+    Polyfill.Example.IndexRange/        // Index/Range feature demo
+        Program.cs
+        ...
+    Polyfill.Example.IsExternalInit/    // isExternalInit feature demo
+        Program.cs
+        ...
+    Polyfill.Example.CommonFileDialogs/ // CommonFileDialogs polyfill demo
+        Program.cs
+        ...
+    Polyfill.Example.WindowsLauncher/   // Windows Launcher polyfill demo
+        Program.cs
+        ...
 ```
 
 ## Background
@@ -25,6 +31,8 @@ C# 9.0 introduces features like `record` types and `init` accessors, but these r
 
 - `Polyfill.Example.IsExternalInit`: Shows how to provide the `IsExternalInit` type for .NET Framework to support `init` setters and `record`.
 - `Polyfill.Example.IndexRange`: Demonstrates using C# 8.0 Index/Range syntax in legacy .NET environments.
+- `Polyfill.Example.CommonFileDialogs`: Demonstrates how to use Windows API Code Pack's CommonFileDialogs in legacy .NET (net48) with modern C# syntax.
+- `Polyfill.Example.WindowsLauncher`: Shows how to use Windows 10+ Launcher API (WinRT) from .NET Framework apps, with fallback for older Windows.
 
 ## Getting Started
 
@@ -36,6 +44,7 @@ cd Polyfill.Example.IsExternalInit
 ```
 
 ### 2. Build and Run
+
 
 For `Polyfill.Example.IsExternalInit`:
 
@@ -51,6 +60,22 @@ For `Polyfill.Example.IndexRange`:
 cd src/Polyfill.Example.IndexRange
 msbuild /p:Configuration=Debug
 bin\Debug\net48\Polyfill.Example.IndexRange.exe
+```
+
+For `Polyfill.Example.CommonFileDialogs`:
+
+```bash
+cd src/Polyfill.Example.CommonFileDialogs
+msbuild /p:Configuration=Debug
+bin\Debug\net48\Polyfill.Example.CommonFileDialogs.exe
+```
+
+For `Polyfill.Example.WindowsLauncher`:
+
+```bash
+cd src/Polyfill.Example.WindowsLauncher
+msbuild /p:Configuration=Debug
+bin\Debug\net48\Polyfill.Example.WindowsLauncher.exe
 ```
 
 ## DEMO

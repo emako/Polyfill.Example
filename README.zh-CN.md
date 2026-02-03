@@ -7,12 +7,18 @@
 ```
 Polyfill.Example.slnx
 src/
-  Polyfill.Example.IndexRange/    // Index/Range 特性演示
-    Program.cs
-    ...
-  Polyfill.Example.IsExternalInit/ // isExternalInit 特性演示
-    Program.cs
-    ...
+    Polyfill.Example.IndexRange/        // Index/Range 特性演示
+        Program.cs
+        ...
+    Polyfill.Example.IsExternalInit/    // isExternalInit 特性演示
+        Program.cs
+        ...
+    Polyfill.Example.CommonFileDialogs/ // CommonFileDialogs 特性演示
+        Program.cs
+        ...
+    Polyfill.Example.WindowsLauncher/   // Windows Launcher 特性演示
+        Program.cs
+        ...
 ```
 
 ## 背景
@@ -23,6 +29,8 @@ C# 9.0 引入了 `record` 类型和 `init` 访问器等新特性，但这些特�
 
 - `Polyfill.Example.IsExternalInit`：演示如何为 .NET Framework 提供 `IsExternalInit` 类型以支持 `init` setter 和 `record`。
 - `Polyfill.Example.IndexRange`：演示如何在低版本 .NET 环境下使用 C# 8.0 的 Index/Range 语法。
+- `Polyfill.Example.CommonFileDialogs`：演示如何在 .NET Framework (net48) 下通过 Windows API Code Pack 使用现代 C# 语法调用 CommonFileDialogs。
+- `Polyfill.Example.WindowsLauncher`：演示如何在 .NET Framework 应用中调用 Windows 10+ 的 Launcher API (WinRT)，并为旧版 Windows 提供兼容方案。
 
 ## 快速开始
 
@@ -34,6 +42,7 @@ cd Polyfill.Example.IsExternalInit
 ```
 
 ### 2. 编译与运行
+
 
 以 `Polyfill.Example.IsExternalInit` 为例：
 
@@ -49,6 +58,22 @@ bin\Debug\net48\Polyfill.Example.IsExternalInit.exe
 cd src/Polyfill.Example.IndexRange
 msbuild /p:Configuration=Debug
 bin\Debug\net48\Polyfill.Example.IndexRange.exe
+```
+
+以 `Polyfill.Example.CommonFileDialogs` 为例：
+
+```bash
+cd src/Polyfill.Example.CommonFileDialogs
+msbuild /p:Configuration=Debug
+bin\Debug\net48\Polyfill.Example.CommonFileDialogs.exe
+```
+
+以 `Polyfill.Example.WindowsLauncher` 为例：
+
+```bash
+cd src/Polyfill.Example.WindowsLauncher
+msbuild /p:Configuration=Debug
+bin\Debug\net48\Polyfill.Example.WindowsLauncher.exe
 ```
 
 ## DEMO
